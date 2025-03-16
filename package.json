@@ -1,0 +1,33 @@
+{
+  "name": "reading-tracker-api",
+  "version": "1.0.0",
+  "description": "API for tracking books and reading progress",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx watch src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.13.8",
+    "@hono/zod-validator": "^0.1.11",
+    "dotenv": "^16.4.7",
+    "hono": "^4.7.4",
+    "pg": "^8.14.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.11.11",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  },
+  "pnpm": {
+    "overrides": {
+      "hono@<4.2.7": ">=4.2.7",
+      "hono@<4.6.5": ">=4.6.5",
+      "hono@<4.5.8": ">=4.5.8"
+    }
+  }
+}
